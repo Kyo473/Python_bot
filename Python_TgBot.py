@@ -2,10 +2,13 @@ import os
 import telebot
 import speech_recognition
 from pydub import AudioSegment
-
+import urllib
 # Ниже нужно вставить токен, который дал BotFather при регистрации
 # Пример: token = '2007628239:AAEF4ZVqLiRKG7j49EC4vaRwXjJ6DN6xng8'
 token = '5915311196:AAEj036sM4vVsQMHgJ9n6x_9INGE_TUk5c4'  # <<< Ваш токен
+url = "https://drive.google.com/uc?export=view&id=1WDN5RXcYQHiUT4JVujQ2VSwr7p0XLlYX"
+filestk = "skillbox_sticker.webp"
+urllib.request.urlretrieve(url, filestk)
 
 bot = telebot.TeleBot(token)
 
